@@ -27,9 +27,7 @@ class Planet(Base):
     population = Column(String(250), nullable=False)
     climate = Column(String(250), nullable=False)
     terrain = Column(String(250), nullable=False)
-    
-    planet = relationship(User)
-  
+      
 class Character(Base):
     __tablename__ = 'character'
     id = Column(Integer, primary_key=True)
@@ -38,8 +36,6 @@ class Character(Base):
     hair_color = Column(String(250),nullable=False)
     eye_color = Column(String(250),nullable=False)
     
-    character = relationship(User)
-
 class Vehicle(Base):
     __tablename__ = 'vehicle'
     id = Column(Integer, primary_key=True)
@@ -48,8 +44,6 @@ class Vehicle(Base):
     model = Column(String(250),nullable=False)
     passengers = Column(String(250),nullable=False)
    
-    vehicle = relationship(User)
-
 class Create_planet(Base):
     __tablename__ = 'create_planet'
     id = Column(Integer, primary_key=True)
